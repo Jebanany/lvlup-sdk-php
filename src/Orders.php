@@ -1,6 +1,6 @@
 <?php
 
-namespace jebanany\lvlup;
+namespace Jebanany\Lvlup;
 class Orders extends User
 {
     public function ordersList(int $limit =null, int $afterId = null, int $beforeId = null)

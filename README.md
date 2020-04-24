@@ -13,7 +13,7 @@ composer require jebanany/lvlup
 ## Jak stosować
 ### Implementacja
 ```php
-use jebanany\lvlup\ApiClient;
+use Jebanany\Lvlup\ApiClient;
 require_once('vendor/autoload.php');
 
 // Normalne używanie
@@ -32,7 +32,7 @@ $lvlup = new ApiClient('sandboxapikey', true, false);
 Generowanie nowego konta w Sandboxie, tworzenie płatności, sprawdzenie statusu, zmiana statusu, ponowne sprawdzenie statusu.
 
 ```php
-use jebanany\lvlup\ApiClient;
+use Jebanany\Lvlup\ApiClient;
 
 require_once('vendor/autoload.php');
 
@@ -96,7 +96,7 @@ try {
 W przypadku niepowodzenia zostaną wygenerowane `Exception` lub `TypeError` (inne niż wymagane parametry funkcji np. `string` zamiast `int`)
 W przypadku błędów `Exception` dostępna jest pomocnicza wiadomość (`getMessage()`) i kod odpowiedzi HTTP (`getCode()`) - jeśli zapytanie w ogóle wystąpiło, jeśli nie, `getCode()` zwróci 0.
 ```php
-use jebanany\lvlup\ApiClient;
+use Jebanany\Lvlup\ApiClient;
 
 require_once('vendor/autoload.php');
 

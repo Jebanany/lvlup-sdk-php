@@ -1,6 +1,6 @@
 <?php
 
-namespace jebanany\lvlup;
+namespace Jebanany\Lvlup;
 class Grafana extends Report
 {
     public function grafanaPing()

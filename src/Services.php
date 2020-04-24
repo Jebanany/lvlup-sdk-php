@@ -1,6 +1,6 @@
 <?php
 
-namespace jebanany\lvlup;
+namespace Jebanany\Lvlup;
 class Services extends Payments
 {
     public function servicesList()
