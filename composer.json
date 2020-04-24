@@ -1,0 +1,21 @@
+{
+  "name": "jebanany/lvlup",
+  "description": "API Client LVL UP",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Jebanany",
+      "email": "jebananypl@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "jebanany\\lvlup\\": "src/"
+    }
+  }
+}
