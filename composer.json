@@ -17,5 +17,12 @@
     "psr-4": {
       "jebanany\\lvlup\\": "src/"
     }
+  },
+  "support": {
+    "forum": "https://forum.lvlup.pro/t/biblioteka-php-do-obslugi-lvl-up-api-v4/14461",
+    "docs": "https://api.lvlup.pro/"
+  },
+  "suggest": {
+    "ext-curl": "By default this library uses cURL for API requests. It can be disabled with fallback to file_get_contents()."
   }
 }
