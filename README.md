@@ -171,7 +171,7 @@ $lvlup->partnerIpInfo(1234);
 ```php
 // paymentsBalance()
 // return object
-$lvlup->partnerIpInfo(); //object
+$lvlup->paymentsBalance(); //object
 ```
 * paymentsCreate
 *Wygenerowanie nowej płatności*
