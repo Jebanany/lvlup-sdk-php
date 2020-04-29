@@ -17,7 +17,7 @@ class Payments extends Partner
         return $this->doRequest('GET', '/v4/wallet');
     }
 
-    public function paymentsCreate(int $amount, string $redirectUrl = '', string $webhookUrl = '')
+    public function paymentsCreate($amount, string $redirectUrl = '', string $webhookUrl = '')
     {
         return $this->doRequest('POST', '/v4/wallet/up', [
             'amount' => $this->getValidAmount($amount), 'redirectUrl' => $redirectUrl, 'webhookUrl' => $webhookUrl
