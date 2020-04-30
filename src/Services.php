@@ -33,7 +33,7 @@ class Services extends Payments
     public function servicesUdpFilterWhitelistRuleAdd(int $vpsId, int $portFrom, int $portTo, string $protocol)
     {
         return $this->doRequest('POST', '/v4/services/vps/' . $vpsId . '/filtering/whitelist', [
-            'id' => $vpsId, 'porst' => [
+            'id' => $vpsId, 'ports' => [
                 'from' => $this->validatePort($portFrom), 'to' => $this->validatePort($portTo)
             ], 'protocol' => $this->validateUdpProtocol($protocol)
         ]);
