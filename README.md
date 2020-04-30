@@ -1,6 +1,10 @@
 # lvlup-php-sdk
 Biblioteka PHP obsługująca https://api.lvlup.pro/v4 oraz  https://sandbox-api.lvlup.pro/v4
 
+Dyskusja dotycząca biblioteki dostępna na [Forum LVL UP](https://forum.lvlup.pro/t/biblioteka-php-do-obslugi-lvl-up-api-v4/14461).
+
+Więcej o LVL UP API v4 możesz przeczytać na [Forum LVL UP](https://forum.lvlup.pro/t/panel-klienta-lvlup-pro-api-v4/14111).
+
 ## Wymagania
 * PHP 7+
 * curl (opcjonalnie)
@@ -116,10 +120,14 @@ try {
 ```
 ## Dostępne funkcje
 ```bash
+grafanaPing()
+grafanaRawQuery(array $rawDataQuery)
+grafanaTimeseriesList()
+grafanaTablesList()
 ordersList(int $limit = null, int $afterId = null, int $beforeId = null)
 partnerIpInfo(int $id)
 paymentsBalance()
-paymentsCreate(int $amount, string $redirectUrl = '', string $webhookUrl = '')
+paymentsCreate($amount, string $redirectUrl = '', string $webhookUrl = '')
 paymentsList(int $limit = null, int $afterId = null, int $beforeId = null)
 paymentsStatus($paymentId)
 reportPerformanceCreate($description = '')
@@ -143,15 +151,29 @@ userReferralList()
 ```
 ## Opis metod
 
+<details>
+  <summary>Rozwiń opisy metod</summary>
+
+**Grafana**
+* grafanaPing()
+*Zwraca "OK", jeśli Grafana odpowiada*
+* grafanaRawQuery(array $rawDataQuery)
+*Metryki kompatybilne z Grafana*
+
+* grafanaTimeseriesList()
+*Dostępne serie czasowe*
+* grafanaTablesList()
+*Dostępne tabele*
+
 **Orders**
 
 * ordersList
 *Lista zamówień z paginacją*
 
 ```php
-// ordersList(int $limit =null, int $afterId = null, int $beforeId = null)
+// ordersList(int $limit = null, int $afterId = null, int $beforeId = null)
 // return object
-$lvlup->orderList(); //return object
+$lvlup->ordersList(); //return object
 ```
 
 **Partner**
@@ -161,7 +183,7 @@ $lvlup->orderList(); //return object
 ```php
 // partnerIpInfo(int $id)
 // return object
-$lvlup->partnerIpInfo(1234); 
+$lvlup->partnerIpInfo('203.0.113.24'); 
 ```
 
 **Payments**
@@ -176,10 +198,12 @@ $lvlup->paymentsBalance(); //object
 * paymentsCreate
 *Wygenerowanie nowej płatności*
 ```php
-// paymentsCreate(int $amount, string $redirectUrl = '', string $webhookUrl = '')
+// paymentsCreate($amount, string $redirectUrl = '', string $webhookUrl = '')
 // return object
-$lvlup->paymentsCreate(1.50); 
-$lvlup->paymentsCreate('1.50'); // string jako kwota również działa
+$lvlup->paymentsCreate(1.5); 
+$lvlup->paymentsCreate(1); 
+$lvlup->paymentsCreate(1.62); 
+$lvlup->paymentsCreate('1.56'); // string jako kwota również działa
 $lvlup->paymentsCreate(17, 'http://example.com/redirect', 'http://example.com/webhook'); 
 ```
 * paymentsList
@@ -282,7 +306,7 @@ $lvlup->servicesUdpFilterWhitelistRuleAdd(123, 9526, 10465, 'other');
 ```php
 // servicesUdpFilterWhitelistRuleDel(int $vpsId, int $ruleId)
 // return object
-$lvlup->servicesUdpFilterWhitelist(123, 456);
+$lvlup->servicesUdpFilterWhitelistRuleDel(123, 456);
 ```
 * servicesVpsStart
 *Wystartuj VPS*
@@ -336,3 +360,4 @@ $lvlup->userReferralCreate();
 // return object
 $lvlup->userReferralList();
 ```
+</details>
