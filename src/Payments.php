@@ -26,7 +26,7 @@ class Payments extends Partner
     public function paymentsStatus($paymentId)
     {
 
-        $this->avalaibleExceptions = [404 => 'Pending payment doesn\'t exist or you don\'t have access to it.'];
+        $this->availableExceptions = [404 => 'Pending payment doesn\'t exist or you don\'t have access to it.'];
         return $this->doRequest('GET', '/v4/wallet/up/' . $paymentId);
 
     }

@@ -7,7 +7,7 @@ use Exception;
 class ApiClient extends Services
 {
 
-    protected $avalaibleExceptions = [];
+    protected $availableExceptions = [];
     private $lastHttpCode = 0;
     private $initialExceptions = [401 => 'Unauthorized Error (Probably invalid API key)'];
     private $useCurl;
@@ -155,8 +155,8 @@ class ApiClient extends Services
 
     protected function generateExceptionHttpCode()
     {
-        $exceptions = $this->avalaibleExceptions + $this->initialExceptions;
-        $this->avalaibleExceptions = [];
+        $exceptions = $this->availableExceptions + $this->initialExceptions;
+        $this->availableExceptions = [];
         if (isset($exceptions[$this->lastHttpCode])) {
             throw new Exception($exceptions[$this->lastHttpCode], $this->lastHttpCode);
         } else {

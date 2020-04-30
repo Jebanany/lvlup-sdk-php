@@ -23,7 +23,7 @@ class User extends Grafana
 
     public function userReferralCreate()
     {
-        $this->avalaibleExceptions = [403 => 'You have at least one promo code already.'];
+        $this->availableExceptions = [403 => 'You have at least one promo code already.'];
         return $this->doRequest('POST', '/v4/me/referral/generic');
     }
 
