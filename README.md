@@ -26,7 +26,7 @@ $lvlup = new ApiClient('apikey');
 $lvlup = new ApiClient('apikey', false, false);
 
 // Sandbox
-$lvlup = new ApiClient('sandboxapikey', false);
+$lvlup = new ApiClient('sandboxapikey', true);
 // bez używania cURL
 $lvlup = new ApiClient('sandboxapikey', true, false);
 ```
