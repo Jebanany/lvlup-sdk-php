@@ -181,7 +181,7 @@ $lvlup->ordersList(); //return object
 
 * partnerIpInfo
 ```php
-// partnerIpInfo(int $id)
+// partnerIpInfo($ip)
 // return object
 $lvlup->partnerIpInfo('203.0.113.24'); 
 ```
