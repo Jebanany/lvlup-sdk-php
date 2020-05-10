@@ -4,9 +4,9 @@ namespace Jebanany\Lvlup;
 class Partner extends Orders
 {
 
-    public function partnerIpInfo(int $id)
+    public function partnerIpInfo($ip)
     {
-        return $this->doRequest('GET', '/v4/partner/ip/' . $id );
+        return $this->doRequest('GET', '/v4/partner/ip/' . $ip );
     }
 
 }
