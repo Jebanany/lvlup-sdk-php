@@ -1,5 +1,5 @@
 # lvlup-php-sdk
-Biblioteka PHP obsługująca https://api.lvlup.pro/v4 oraz  https://sandbox-api.lvlup.pro/v4
+Biblioteka PHP obsługująca https://api.lvlup.pro/v4 oraz  https://api.sandbox.lvlup.pro/v4
 
 Dyskusja dotycząca biblioteki dostępna na [Forum LVL UP](https://forum.lvlup.pro/t/biblioteka-php-do-obslugi-lvl-up-api-v4/14461).
 
