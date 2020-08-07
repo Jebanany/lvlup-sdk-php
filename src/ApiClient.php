@@ -26,7 +26,7 @@ class ApiClient extends Services
             $this->useCurl = false;
         }
         if ($sandbox) {
-            $this->apiUrl = 'https://sandbox-api.lvlup.pro';
+            $this->apiUrl = 'https://api.sandbox.lvlup.pro';
         } else {
             $this->apiUrl = 'https://api.lvlup.pro';
         }
